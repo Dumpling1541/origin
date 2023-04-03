@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="users">
+	<select id="findById" resultType="data.User" parameterType="java.lang.String">
+		SELECT USERS.*, AVATARS.URL AS AVATAR_URL
+		FROM USERS JOIN AVATARS
+		ON USERS.AVATAR_ID = AVATARS.ID
+		WHERE USERS.ID = #{id }
+	</select>
+	<insert id="create" parameterType="java.util.HashMap">
+		INSERT INTO USERS(ID, PASS, NAME, AVATAR_ID) VALUES(#{id}, #{pass}, #{name}, #{avatarId} )
+	</insert>
+</mapper>

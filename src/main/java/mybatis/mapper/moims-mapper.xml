@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="moims">
+	<select id="findLatest" resultType="data.Moim">
+		SELECT * FROM
+		(SELECT * FROM
+		MOIMS WHERE BEGIN_DATE &gt; SYSDATE ORDER BY BEGIN_DATE-SYSDATE)
+		WHERE
+		ROWNUM &lt;=3
+	</select>
+	<select id="findById" resultType="data.Moim" parameterType="string">
+		SELECT * FROM MOIMS WHERE ID = #{id}
+	</select>
+	<update id="updateCurrentPerson"  parameterType="string" >
+		UPDATE MOIMS SET CURRENT_PERSON = CURRENT_PERSON + 1 WHERE ID = #{id}
+	</update>
+</mapper>

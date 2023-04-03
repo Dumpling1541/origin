@@ -1,0 +1,162 @@
+@charset "UTF-8";
+
+@import
+	url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100&display=swap')
+	;
+
+* {
+	font-family: 'Noto Sans KR', sans-serif;
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+input, textarea, button, select {
+	padding: 4px;
+}
+
+.root {
+	
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	min-width: 100vw;
+	height: 100vh;
+	margin: auto;
+}
+
+.block {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 4px;
+}
+
+.block-row {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+	align-items: center;
+}
+/* 모임쪽 css */
+.moim-form {
+	flex: 1;
+	min-width: 80vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.moim-form>div, p {
+	width: 100%;
+}
+
+.moim-form label {
+	font-size: 1.0em;
+}
+
+.moim-brief-card {
+	flex: 1;
+	margin: 12px;
+	padding: 4px 16px;
+	border: 1px solid #888888;
+	border-radius: 8px;
+	background-color: slategrey;
+	color: white;
+	font-size: 0.9em;
+}
+
+.moim-brief-card:hover {
+	color: black;
+	background-color: lightgrey;
+	font-weight: bold;
+}
+
+.moim-detail-card {
+	width: 32%;
+	height: 180px;
+	padding: 4px 16px;
+	border: 1px solid #888888;
+	border-radius: 3px;
+	font-size: 0.9em;
+	box-sizing: border-box;
+}
+
+.moim-brief-card:hover {
+	color: black;
+	background-color: lightgrey;
+	font-weight: bold;
+}
+
+/* 회원가입&로그인 CSS */
+.sign-form {
+	flex: 1;
+	width: 90%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.sign-form label {
+	font-size: 1.2em;
+	font-weight: bold;
+}
+
+.sign-form input {
+	font-size: 1.1em;
+	padding: 4px;
+	text-align: center;
+}
+
+/* 모임상세보기에서 사용중인 css */
+.moim-detail-container {
+	background-color: #f1f3f9;
+	flex: 1;
+	width: 100vw;
+	padding: 12px;
+}
+
+.moim-detail-content {
+	margin-top: 12px;
+	width: 960px;
+	margin: auto;
+	padding: 24px;
+	background-color: white;
+}
+.moim-detail-desc {
+	min-height : 280px;
+	margin-top : 16px;
+	border-top : 1px solid gray;
+	padding : 16px;
+	white-space: pre-wrap;
+	margin-bottom :16px;
+	border-bottom: 1px solid gray;
+}
+
+.moim-join-bt {
+	background-color: #ffe4e1;
+	padding: 10px;
+	border-radius: 5px;
+	cursor: pointer;
+}
+.moim-join-bt:hover {
+	background-color: #efd4d1;
+	padding: 10px;
+	border-radius: 5px;
+	cursor: pointer;
+}
+.moim-join-bt:active {
+	background-color: #dfc4c1;
+	padding: 10px;
+	border-radius: 5px;
+	cursor: pointer;
+}
